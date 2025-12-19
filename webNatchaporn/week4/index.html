@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="./styles.css">
-        <title>week4 - Project overview</title>
-    </head>
-    <body>
-        <div>
-            <h1>week4 - Project overview</h1>
-        </div>
- <script>
- const userName = window.prompt('what is your name?');
- if (userName){
-    window.alert('hello '+ userName)
- }
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <title>week4 - Project overview</title>
+</head>
+
+<body>
+    <div>
+        <h1>week4 - Project overview</h1>
+    </div>
+    <div>
+        <h1 id="greeting">Hello </h1>
+    </div>
+    <div class="userInFo">
+        <h2>ข้อมูลผู้ใช้</h3>
+        <button onclick="user()">เเสดงข้อมูลผู้ใช้</button>
+    </div>
+
+    <div class="Refresh">
+        <h2>รีเฟรชหน้า</h3>
+        <button onclick="refresh()">รีเฟรช</button>
+    </div>
+
+    <div class="new">
+        <h2>New Tab</h3>
+        <button onclick="newTab()">New Tab</button>
+    </div>
+    <script>
+        //window.alert(navigator.language)//ภาษาของเบารืเซอร์
+        //window.alert(navigator.userAgent)ดูข้อมูลเบาร์เซอร์
+        //window.alert("")พิมพ์ข้อความออกมาโดยไม่สนคำตอบ
+        //window.confirm('')พิมพ์ข้อความออกมาโดยสนคำตอบ ok,cancle
+        //window.alert(screen.availWidth)ความกว้างใช้งานได้จริงของหน้าจอ
+       function newTab(){
+        window.open('https://www.Google.com')
+       }
+       function refresh(){
+        window.location.reload()
+       }
+       function user(){
+        const userAgent = navigator.userAgent
+        const userlanguage = navigator.language
+        const width = screen.availWidth
+        const hight = screen.availHeight
+        alert(' ข้อมูลผู้ใช้ '+ userAgent+ ' ภาษา '+ userlanguage+' ความกว้าง '+ width+' สูง '+ hight)
+       }
+       const userName = window.prompt('Pls input name');
+       
+       if (userName){
+        document.getElementById('greeting').innerText = 'Hello '+ userName;
+       }
+
     </script>
-    </body>
-    
+</body>
+
 </html>
