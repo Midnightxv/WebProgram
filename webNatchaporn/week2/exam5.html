@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exam</title>
+    <style>
+        h2 {
+            color: rgb(75, 9, 138);
+            font-size: x-large;
+        }
+
+        input {
+            border-radius: 10px;
+            font-size: large;
+        }
+
+        select {
+            border-radius: 5px;
+            font-size: large;
+        }
+        p{
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ชื่อ-นามสกุล</h2>
+    <input id="msg-input" placeholder="กรอกชื่อ">
+    <p id="msg">ยินดีต้อนรับ : </p>
+
+    <h2>เลือกภาษาที่ต้องการ</h2>
+    <p id="show-select">คุณเลือกภาษา : </p>
+    <select id="Lg">
+        <option>โปรดเลือกภาษาที่ต้องการ</option>
+        <option>JavaScript</option>
+        <option>Python</option>
+        <option>TypeScript</option>
+    </select>
+    
+</body>
+<script>
+    const msgInputElement = document.getElementById("msg-input")
+    msgInputElement.addEventListener("change", function () {
+        const msg = this.value
+        const showMsgElement = document.getElementById('msg')
+        showMsgElement.innerText = 'ยินดีต้อนรับ : ' + msg
+    })
+    const msgSelectElement = document.getElementById("Lg")
+    msgSelectElement.addEventListener("input", function () {
+        const msg = this.value
+        const showSelectElement = document.getElementById('show-select')
+        showSelectElement.innerText = 'คุณเลือกภาษา : ' + msg
+    })
+</script>
+
+</html>

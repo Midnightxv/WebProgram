@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>whatWeb</title>
+        <style>
+            body{
+                background-color: rgb(65, 64, 64);
+            }
+            h1{
+                color: rgb(194, 11, 11);
+                text-align: center;
+                font-size: xx-large;
+            }
+            p{
+                background-color: #f0f0f0;
+                color: #333;
+                padding: 15px;
+                text-align: center;
+                font-size: larger;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 id="'title-text">มีมออนไลน์ยินดีต้อนรับ</h1>
+        <p>มีมเเมว?</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpCLMgh0Uan2T0PYumOLG4lvOElGA4RkCLZA&s" alt="มีมเเมว">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3LzKIJXQwo3fWChisSRigvwerHKe0dPP4g&s" alt="เเมวหน้าอะไร">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOk-5ZWMH6CwR5jl2hZO4dYFbt0yyWlxplC-fgArD6dkae1GvY6gQlvVDNSxTSoTFBQ64&usqp=CAU" alt="meow">
+        <button onclick="say()">click here</button>
+        <script>
+            let myName = "View"
+            function say(){
+                alert("hello" + myName)
+                const textTitleElement = document.getElementById('title-text')
+                 textTitleElement.innerText = 'สวัสดีมีมออนไลน์ยินดีต้อนรับ' + myName
+            }
+        </script>
+
+    </body>
+</html>
